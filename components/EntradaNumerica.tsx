@@ -10,7 +10,7 @@ interface Props {
 const components = (props: Props) => {
 
     const inc = () => props.onChange(props.value + 1)
-    const dec = () => props.onChange(props.value> 0 ? props.value - 1 : 0)
+    const dec = () => props.onChange(props.value > 0 ? props.value - 1 : 0)
 
   return (
     <div className= {styles.entradaNumerica}>

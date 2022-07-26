@@ -9,23 +9,6 @@ export default function Formulario() {
   const [qtdePortas, setQtdePortas] = useState(3)
   const [comPresente, setComPresente] = useState(1)
 
-  const handlePresent = (e) => {
-    if(comPresente<qtdePortas){
-      setComPresente(e)
-    }else{
-      alert('Não pode ser maior que a quantidade de portas')
-      setComPresente(qtdePortas)
-    }
-  }
-  const handlePortas = (e) => {
-    if(qtdePortas<3){
-      setQtdePortas(e)
-    }else{
-      alert('Não pode ser menor que 3')
-      setQtdePortas(3)
-    }
-  }
-
   return (
     <div  className={styles.formulario} >
       <div>
@@ -36,7 +19,7 @@ export default function Formulario() {
           <EntradaNumerica
             text="Qtde Portas?" 
             value={qtdePortas}
-            onChange = {(e)=>handlePortas(e)}
+            onChange = {(e)=>setQtdePortas(e)}
           />
         </Cartao>
       </div>
@@ -45,7 +28,7 @@ export default function Formulario() {
         <EntradaNumerica
             text="Porta com presente?" 
             value={comPresente}
-            onChange = {(e)=>handlePresent(e)}
+            onChange = {(e)=>setComPresente(e)}
           />
         </Cartao>
         <Cartao bgcolor="#28a085" >
