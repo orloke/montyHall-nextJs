@@ -13,7 +13,7 @@ export default function Formulario() {
     if(comPresente<qtdePortas){
       setComPresente(e)
     }else{
-      alert('Não pode ser menor que a quantidade de portas')
+      alert('Não pode ser maior que a quantidade de portas')
       setComPresente(qtdePortas)
     }
   }
